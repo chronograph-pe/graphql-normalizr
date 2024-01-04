@@ -16,8 +16,8 @@ module.exports = [
   {
     input,
     output: {
-      file: "dist/graphql-normalizr.umd.js",
-      format: "umd",
+      file: 'dist/graphql-normalizr.umd.js',
+      format: 'umd',
       name,
       globals,
     },
@@ -25,16 +25,15 @@ module.exports = [
     plugins: [
       nodeResolve(),
       babel(babelOpts),
-      replace({ "process.env.NODE_ENV": JSON.stringify("development") }),
-      replace({ "process?.env?.NODE_ENV": JSON.stringify("production") }),
+      replace({ 'process.env.NODE_ENV': JSON.stringify('development'), }),
     ],
   },
 
   {
     input,
     output: {
-      file: "dist/graphql-normalizr.min.js",
-      format: "umd",
+      file: 'dist/graphql-normalizr.min.js',
+      format: 'umd',
       name,
       globals,
     },
@@ -42,11 +41,10 @@ module.exports = [
     plugins: [
       nodeResolve(),
       babel(babelOpts),
-      replace({ "process.env.NODE_ENV": JSON.stringify("production") }),
-      replace({ "process?.env?.NODE_ENV": JSON.stringify("production") }),
+      replace({ 'process.env.NODE_ENV': JSON.stringify('production'), }),
       terser(),
     ],
   },
-  require("./rollup.config.cjs"),
-  require("./rollup.config.esm"),
-];
+  require('./rollup.config.cjs'),
+  require('./rollup.config.esm'),
+]
