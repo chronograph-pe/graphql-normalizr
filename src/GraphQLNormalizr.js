@@ -20,7 +20,7 @@ import {
 } from './utils'
 import { CACHE_READ_ERROR, CACHE_WRITE_ERROR, PAGEINFO_WITH_USE_CONNECTIONS_FALSE, } from './constants'
 
-const isProd = process.env.NODE_ENV === 'production'
+const isProd = true//process.env.NODE_ENV === 'production'
 const warnings = {}
 const casingMethodMap = {
   lower: toLower,
